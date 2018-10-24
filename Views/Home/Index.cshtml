@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word Generator assignment</title>
+    <style>
+        .container{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="Create" method="post">
+            <h4>Random Passcode (passcode #@Context.Session.GetInt32("Counter"))</h2>
+            <h4>Random Passcode (passcode #@ViewBag.Counter)</h2>
+            <h2>@ViewBag.NewPasscode</h2>
+            <p><input type='submit' value='Generate'></p>
+            <p><a href="/reset">Reset</a></p>
+        </form>
+        </h1>
+    </div>
+</body>
+</html>
